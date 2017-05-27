@@ -3,9 +3,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var RoleSchema = new Schema({
-        code: String,
-        description: String,
-        enable:{ type: Boolean, default: true }
+        code :            String,
+        description :     String,
+        permissionCodes : [String],
+        enable :          { type: Boolean, default: true }
 });
 // the schema is useless so far
 // we need to create a model using it

@@ -60,7 +60,8 @@ describe('Roles', () => {
       it('it should POST a role ', () => {
         var role = {
                 code: "MEDICO",
-                description: "Medico"
+                description: "Medico",
+                permissionCodes:["CO","MO","SO"]
             }
             chai.request(server)
             .post('/api/' + process.env.API_VERSION + '/roles')
@@ -71,6 +72,7 @@ describe('Roles', () => {
                 expect(res.body).to.have.property('message').eql('Role successfully added!');
                 expect(res.body.role).to.have.property('code');
                 expect(res.body.role).to.have.property('description');
+                expect(res.body.role).to.have.property('permissionCodes');
                 expect(res.body.role).to.have.property('enabled');
             })
             .catch(function (err) {
@@ -82,7 +84,8 @@ describe('Roles', () => {
       it('it should GET a role by the given id', () => {
         var role = new Role({ 
                               code: "WEBADMIN",
-                              description: "Administrador web"
+                              description: "Administrador web",
+                              permissionCodes:["CO","MO","SO"]
                             });
         role.save((err, role) => {
             chai.request(server)
@@ -93,6 +96,7 @@ describe('Roles', () => {
                 expect(res.body).to.be.a('object');
                 expect(res.body.role).to.have.property('code');
                 expect(res.body.role).to.have.property('description');
+                expect(res.body.role).to.have.property('permissionCodes');
                 expect(res.body.role).to.have.property('enabled');
                 expect(res.body).to.have.property('_id').eql(role.id);
             })
@@ -107,7 +111,8 @@ describe('Roles', () => {
       it('it should UPDATE a role given the id', () => {
         var role = new Role({ 
                             code: "MEDICOP",
-                            description: "Medico pediatra"
+                            description: "Medico pediatra",
+                            permissionCodes:["CO","MO","SO"]
                             })
         role.save((err, role) => {
                 chai.request(server)
@@ -134,7 +139,8 @@ describe('Roles', () => {
       it('it should DELETE a role given the id', () => {
         var role = new Role({  
                             code: "MAS",
-                            description: "Masajista"
+                            description: "Masajista",
+                            permissionCodes:["CO","MO","SO"]
                             })
         role.save((err, role) => {
                 chai.request(server)

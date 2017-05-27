@@ -23,7 +23,8 @@ router.route('/roles')
   .post(validator.validate({
          body: {
                 code:             { isRequired: true },
-                description:      { isRequired: true }
+                description:      { isRequired: true },
+                permissionCodes:  { isRequired: true }
               },
               headers: {
                 'content-type': { isRequired: true, equals: 'application/json' }
@@ -34,7 +35,8 @@ router.route('/roles')
             //console.log(req.body);
             var role = new Role({
                   code: req.body.code,
-                  description: req.body.description
+                  description: req.body.description,
+                  permissionCodes: req.body.permissionCodes
             });
             var promise = role.save();
             promise.then(function(role) {
@@ -79,7 +81,8 @@ router.route('/role/:idRole')
           promise.then(function(role) {
             if(role){
                 role.code = req.body.code,
-                role.description = req.body.description
+                role.description = req.body.description,
+                role.permissionCodes = req.body.permissionCodes
                 return role.save(); // returns a promise
             }
           })
