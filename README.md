@@ -1,4 +1,4 @@
-## api-role
+## api-roleType
 
 This is a simple CRUD Api for types of roles.
 
