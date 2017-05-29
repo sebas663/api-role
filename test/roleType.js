@@ -1,7 +1,7 @@
 var mongoose     =   require("mongoose");
 // set Promise provider to bluebird
 mongoose.Promise = require('bluebird');
-var Role         =   require('../models/role');
+var Role         =   require('../models/roleType');
 //Require the dev-dependencies
 var chai         =   require('chai');
 var chaiHttp     =   require('chai-http');

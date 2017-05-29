@@ -4,7 +4,7 @@ var app         =   express();
 var bodyParser  =   require("body-parser");
 var mongoose    =   require('mongoose');
 var morgan      =   require('morgan');
-var roleRoute =   require('./routers/role');
+var roleRoute =   require('./routers/roleType');
 //For work whit environment variable.
 require('dotenv').config();
 

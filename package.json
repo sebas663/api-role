@@ -1,5 +1,5 @@
 {
-  "name": "api-role",
+  "name": "api-role-type",
   "version": "1.0.0",
   "description": "Role CRUD administration.",
   "main": "server.js",
@@ -11,7 +11,7 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sebas663/api-role.git"
+    "url": "git://github.com/sebas663/api-roleType.git"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
