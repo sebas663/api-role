@@ -5,7 +5,7 @@ This is a simple CRUD Api for types of roles.
 ## Installation
 In git bash<br />
 git clone https://github.com/sebas663/api-roleType.git<br />
-cd root folder ~ api-role<br />
+cd root folder ~ api-roleType<br />
 npm install
 
 ## API Reference
@@ -19,5 +19,5 @@ PUT<br />
 DELETE
 
 ## Tests
-In git bash in root folder ~ api-role:<br />
+In git bash in root folder ~ api-roleType:<br />
 npm test
