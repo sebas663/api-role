@@ -1,10 +1,10 @@
 ## api-role
 
-This is a simple CRUD Api for types of documents of identity.
+This is a simple CRUD Api for types of roles.
 
 ## Installation
 In git bash<br />
-git clone https://github.com/sebas663/api-role.git<br />
+git clone https://github.com/sebas663/api-roleType.git<br />
 cd root folder ~ api-role<br />
 npm install
 
